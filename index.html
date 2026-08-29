@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Jeph Reyes — AI First FullStack Software Developer Portfolio" />
+    <title>Jeph Reyes | AI First FullStack Software Developer</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <link rel="stylesheet" href="index-assets/index.css" />
+</head>
+
+<body class="min-h-screen bg-white">
+
+    <!-- Top navigation -->
+    <header class="sticky top-0 z-50 bg-blue-600 text-white shadow-sm">
+        <div class="mx-auto flex max-w-5xl items-center justify-between px-4 py-2.5 sm:px-8">
+            <a href="#home" class="text-sm font-bold tracking-tight md:hidden">JR</a>
+
+            <nav class="ml-auto hidden items-center gap-5 text-xs font-semibold md:flex lg:gap-7">
+                <a href="#home" class="transition hover:text-blue-100">Home</a>
+                <a href="#projects" class="transition hover:text-blue-100">Applications and Projects</a>
+                <a href="#skills" class="transition hover:text-blue-100">Skills and Qualifications</a>
+                <a href="#experience" class="transition hover:text-blue-100">Work Experience</a>
+                <a href="blog.html" class="transition hover:text-blue-100">Personal Blog</a>
+            </nav>
+
+            <button id="mobileMenuButton" type="button"
+                class="ml-auto inline-flex h-9 w-9 items-center justify-center rounded-md border border-blue-400/60 transition hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-white/70 md:hidden"
+                aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobileMenu">
+                <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" aria-hidden="true">
+                    <line x1="4" y1="6" x2="20" y2="6"></line>
+                    <line x1="4" y1="12" x2="20" y2="12"></line>
+                    <line x1="4" y1="18" x2="20" y2="18"></line>
+                </svg>
+            </button>
+        </div>
+    </header>
+
+    <div id="mobileMenu"
+        class="mobile-menu-backdrop fixed inset-0 z-[60] hidden items-start justify-center bg-black/40 px-4 pt-16 md:hidden"
+        aria-hidden="true">
+        <div class="mobile-menu-panel w-full max-w-sm rounded-lg bg-white p-2 text-gray-800 shadow-2xl">
+            <div class="flex items-center justify-between border-b border-gray-100 px-3 py-2">
+                <span class="text-sm font-bold">Navigation</span>
+                <button id="mobileMenuClose" type="button"
+                    class="flex h-8 w-8 items-center justify-center rounded-md text-xl text-gray-400 transition hover:bg-gray-100 hover:text-gray-700"
+                    aria-label="Close navigation menu">&times;</button>
+            </div>
+            <nav class="py-2 text-sm font-semibold">
+                <a href="#home"
+                    class="mobile-nav-link block rounded-md px-3 py-3 transition hover:bg-blue-50 hover:text-blue-600">Home</a>
+                <a href="#projects"
+                    class="mobile-nav-link block rounded-md px-3 py-3 transition hover:bg-blue-50 hover:text-blue-600">Applications
+                    and Projects</a>
+                <a href="#skills"
+                    class="mobile-nav-link block rounded-md px-3 py-3 transition hover:bg-blue-50 hover:text-blue-600">Skills
+                    and
+                    Qualifications</a>
+                <a href="#experience"
+                    class="mobile-nav-link block rounded-md px-3 py-3 transition hover:bg-blue-50 hover:text-blue-600">Work
+                    Experience</a>
+                <a href="blog.html"
+                    class="mobile-nav-link block rounded-md px-3 py-3 transition hover:bg-blue-50 hover:text-blue-600">Personal
+                    Blog</a>
+            </nav>
+        </div>
+    </div>
+
+    <main class="mx-auto max-w-5xl px-5 sm:px-8">
+
+        <!-- HERO -->
+        <section id="home" class="reveal py-10 sm:py-12">
+            <div class="grid items-center gap-8 md:grid-cols-[180px_1fr]">
+                <div class="flex justify-center md:justify-start">
+                    <div class="profile-ring h-[180px] w-[180px] shrink-0 rounded-full border-2 bg-gray-400">
+                        <!-- Profile photo intentionally left as a gray placeholder -->
+                    </div>
+                </div>
+
+                <div>
+                    <h1 class="text-xl font-bold tracking-tight sm:text-2xl">Jeph Reyes</h1>
+                    <h2 class="text-lg font-bold text-gray-900 sm:text-xl">AI First · FullStack Software Developer</h2>
+
+                    <p class="mt-1 text-sm font-semibold text-gray-400">
+                        PHP · Laravel · Angular · Microsoft Azure
+                    </p>
+
+                    <p class="mt-3 section-description sm:text-sm">
+                        I thrive on creating new solutions, learning new technologies and turning
+                        complex problems into practical, reliable software.
+                    </p>
+
+                    <p class="mt-2 section-description sm:text-sm">
+                        I'm an experienced full-stack developer focused on building maintainable
+                        applications, APIs and AI-powered tools. I enjoy solving difficult problems
+                        and continuously improving my engineering workflow.
+                    </p>
+
+                    <div class="mt-5 flex flex-wrap items-center gap-3 sm:gap-5">
+                        <a href="#contact"
+                            class="rounded bg-blue-600 px-4 py-2 text-sm font-bold text-white transition hover:bg-blue-700">
+                            Contact Me
+                        </a>
+
+                        <a href="https://github.com/" target="_blank" rel="noopener"
+                            class="inline-flex items-center gap-2 text-sm font-semibold text-gray-600 transition hover:text-blue-600"
+                            aria-label="GitHub profile">
+                            <svg class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                <path
+                                    d="M12 .5C5.65.5.5 5.66.5 12.02c0 5.1 3.31 9.42 7.9 10.95.58.1.79-.25.79-.56v-2.15c-3.21.7-3.89-1.55-3.89-1.55-.53-1.34-1.29-1.7-1.29-1.7-1.05-.72.08-.71.08-.71 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.69 1.26 3.35.96.1-.75.4-1.26.73-1.55-2.56-.29-5.25-1.28-5.25-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.47.11-3.06 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.79 0c2.21-1.49 3.18-1.18 3.18-1.18.63 1.59.23 2.77.11 3.06.74.81 1.19 1.84 1.19 3.1 0 4.43-2.7 5.4-5.27 5.69.41.36.78 1.08.78 2.18v3.23c0 .31.21.67.8.56a11.52 11.52 0 0 0 7.89-10.95C23.5 5.66 18.35.5 12 .5Z" />
+                            </svg>
+                            <span>GitHub</span>
+                        </a>
+
+                        <a href="https://www.linkedin.com/" target="_blank" rel="noopener"
+                            class="inline-flex items-center gap-2 text-sm font-semibold text-gray-600 transition hover:text-blue-600"
+                            aria-label="LinkedIn profile">
+                            <svg class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                <path
+                                    d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.44-2.14 2.94v5.67H9.34V8.99h3.41v1.56h.05c.47-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.29ZM5.32 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12ZM3.54 20.45H7.1V8.99H3.54v11.46ZM22.23 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.46c.98 0 1.77-.77 1.77-1.73V1.73C24 .77 23.21 0 22.23 0Z" />
+                            </svg>
+                            <span>LinkedIn</span>
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PROJECTS -->
+        <section id="projects" class="reveal section-divider py-9 sm:py-11">
+            <div class="text-center">
+                <h2 class="section-title">Applications and Projects</h2>
+                <div class="mx-auto mt-1 h-1 w-12 rounded bg-blue-600"></div>
+                <p class="mx-auto mt-2 max-w-2xl section-description">
+                    Here is a brief overview of the projects and applications I've developed in my career.
+                </p>
+            </div>
+
+            <div class="project-line mt-7 space-y-7">
+
+                <!-- Project 1: RIGHT -->
+                <article class="project-item reveal px-1">
+                    <div class="project-card rounded border border-gray-200 bg-white shadow-soft">
+                        <div class="project-thumb">
+                            <div class="mock-window">
+                                <div class="mock-top"></div>
+                                <div class="mock-body">
+                                    <div class="mock-side"></div>
+                                    <div class="mock-content">
+                                        <div class="mock-bar long"></div>
+                                        <div class="mock-bar mid"></div>
+                                        <div class="mt-4 grid grid-cols-3 gap-2">
+                                            <div class="h-10 rounded bg-green-100"></div>
+                                            <div class="h-10 rounded bg-blue-100"></div>
+                                            <div class="h-10 rounded bg-gray-100"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-4">
+                            <h3 class="text-sm font-bold">Naval/Military Topics</h3>
+                            <p class="mt-2 section-description">
+                                A web application designed to organize information and provide a simple,
+                                searchable interface for military and operational topics.
+                            </p>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 2: LEFT -->
+                <article class="project-item reveal px-1">
+                    <div class="project-card rounded border border-gray-200 bg-white shadow-soft">
+                        <div class="project-thumb">
+                            <div class="mock-window">
+                                <div class="mock-top"></div>
+                                <div class="mock-body">
+                                    <div class="mock-side"></div>
+                                    <div class="mock-content">
+                                        <div class="grid grid-cols-3 gap-2">
+                                            <div class="h-9 rounded bg-blue-100"></div>
+                                            <div class="h-9 rounded bg-green-100"></div>
+                                            <div class="h-9 rounded bg-purple-100"></div>
+                                        </div>
+                                        <div class="mt-3 mock-bar long"></div>
+                                        <div class="mock-bar mid"></div>
+                                        <div class="mock-bar short"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-4">
+                            <h3 class="text-sm font-bold">Dealer Center</h3>
+                            <p class="mt-2 section-description">
+                                A business management platform with dashboards, workflow tools and
+                                integrations built to simplify day-to-day operations.
+                            </p>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 3: RIGHT -->
+                <article class="project-item reveal px-1">
+                    <div class="project-card rounded border border-gray-200 bg-white shadow-soft">
+                        <div class="project-thumb">
+                            <div class="mock-window">
+                                <div class="mock-top"></div>
+                                <div class="mock-body">
+                                    <div class="mock-side"></div>
+                                    <div class="mock-content">
+                                        <div class="h-14 rounded bg-gray-100"></div>
+                                        <div class="mt-3 flex gap-2">
+                                            <div class="h-10 w-2/3 rounded bg-orange-100"></div>
+                                            <div class="h-10 w-1/3 rounded bg-red-100"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-4">
+                            <h3 class="text-sm font-bold">Dealer Website</h3>
+                            <p class="mt-2 section-description">
+                                A responsive customer-facing website focused on presenting products,
+                                services and useful information through a clean interface.
+                            </p>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 4: LEFT -->
+                <article class="project-item reveal px-1">
+                    <div class="project-card rounded border border-gray-200 bg-white shadow-soft">
+                        <div class="project-thumb">
+                            <div class="mock-window">
+                                <div class="mock-top"></div>
+                                <div class="mock-body">
+                                    <div class="mock-side"></div>
+                                    <div class="mock-content">
+                                        <div class="grid grid-cols-3 gap-2">
+                                            <div class="h-9 rounded bg-blue-100"></div>
+                                            <div class="h-9 rounded bg-green-100"></div>
+                                            <div class="h-9 rounded bg-purple-100"></div>
+                                        </div>
+                                        <div class="mt-3 mock-bar long"></div>
+                                        <div class="mock-bar mid"></div>
+                                        <div class="mock-bar short"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-4">
+                            <h3 class="text-sm font-bold">Dealer Center</h3>
+                            <p class="mt-2 section-description">
+                                A business management platform with dashboards, workflow tools and
+                                integrations built to simplify day-to-day operations.
+                            </p>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- CORE SKILLS -->
+        <section id="skills" class="reveal section-divider py-9 sm:py-11">
+            <div class="mx-auto max-w-5xl">
+                <div class="mb-7 text-center">
+                    <h2 class="skills-heading">My Top Skill Set</h2>
+                    <div class="skills-heading-line"></div>
+                    <p class="mt-3 text-center text-sm text-gray-500">
+                        My favorites technologies chosen for their ability to deliver simple, effective,
+                        and production-ready solutions.
+                    </p>
+                </div>
+
+                <div class="skills-grid">
+                    <article class="skill-card reveal">
+                        <h3 class="skill-header">BACKEND</h3>
+                        <div class="skill-brand-row">
+                            <div class="skill-icon-group">
+                                <div class="skill-icon-badge">
+                                    <img src="index-assets/skill-icons/php.png" alt="PHP logo" loading="lazy">
+                                </div>
+                                <div class="skill-icon-badge">
+                                    <img src="index-assets/skill-icons/laravel.png" alt="Laravel logo" loading="lazy">
+                                </div>
+                            </div>
+                            <div class="skill-title">PHP Laravel</div>
+                        </div>
+                        <p class="skill-copy">
+                            I prefer Laravel because it provides a clean and structured way to build web
+                            applications. Its built-in tools help speed up development while keeping the code
+                            organized and maintainable.
+                        </p>
+                    </article>
+
+                    <article class="skill-card reveal">
+                        <h3 class="skill-header">FRONTEND</h3>
+                        <div class="skill-brand-row">
+                            <div class="skill-icon-group">
+                                <div class="skill-icon-badge">
+                                    <img src="index-assets/skill-icons/vue.png" alt="Vue.js logo" loading="lazy">
+                                </div>
+                                <div class="skill-icon-badge">
+                                    <img src="index-assets/skill-icons/nuxt.png" alt="Nuxt.js logo" loading="lazy">
+                                </div>
+                                <div class="skill-icon-badge">
+                                    <img src="index-assets/skill-icons/typescript.png" alt="TypeScript logo" loading="lazy">
+                                </div>
+                            </div>
+                            <div class="skill-title">Vue.js, Nuxt.js &amp; TypeScript</div>
+                        </div>
+                        <p class="skill-copy">
+                            Vue.js &amp; Nuxt.js — For modern frontend development. I like how their
+                            component-based approach keeps UI logic organized and easy to maintain as
+                            applications grow.
+                        </p>
+                        <p class="skill-copy">
+                            TypeScript — If needed only, I use TypeScript when a project benefits from
+                            stronger type safety and clearer structure. It helps improve code reliability
+                            and maintainability.
+                        </p>
+                    </article>
+
+                    <article class="skill-card reveal">
+                        <h3 class="skill-header">AI TOOLS</h3>
+                        <div class="skill-brand-row">
+                            <div class="skill-icon-group">
+                                <div class="skill-icon-badge">
+                                    <img src="index-assets/skill-icons/chatgpt.png" alt="ChatGPT logo" loading="lazy">
+                                </div>
+                                <div class="skill-icon-badge">
+                                    <img src="index-assets/skill-icons/github.png" alt="GitHub Copilot logo" loading="lazy">
+                                </div>
+                            </div>
+                            <div class="skill-title">Chat GPT &amp; GitHub Copilot</div>
+                        </div>
+                        <p class="skill-copy">
+                            I maintain an active subscription for both. I use them in combination, ChatGPT
+                            for architecture and consultation, Copilot to generate code and boost productivity.
+                        </p>
+                    </article>
+
+                    <article class="skill-card reveal">
+                        <h3 class="skill-header">DEVOPS / INFRASTRUCTURE</h3>
+                        <div class="skill-brand-row">
+                            <div class="skill-icon-group">
+                                <div class="skill-icon-badge">
+                                    <img src="index-assets/skill-icons/docker.png" alt="Docker logo" loading="lazy">
+                                </div>
+                                <div class="skill-icon-badge">
+                                    <img src="index-assets/skill-icons/linux.png" alt="Linux logo" loading="lazy">
+                                </div>
+                            </div>
+                            <div class="skill-title">Docker &amp; Cloud Linux Server</div>
+                        </div>
+                        <p class="skill-copy">
+                            Docker lets me package applications and their dependencies into consistent
+                            portable containers.
+                        </p>
+                        <p class="skill-copy">
+                            Cloud Linux Server — I deploy and host my containerized frontend apps, backend APIs,
+                            and databases on cloud-based Linux servers, giving me full control over the
+                            environment and infrastructure.
+                        </p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- QUALIFICATIONS -->
+        <section class="reveal section-divider py-9 sm:py-11">
+            <div class="text-center">
+                <h2 class="section-title">My Qualifications</h2>
+                <div class="mx-auto mt-1 h-1 w-12 rounded bg-blue-600"></div>
+                <p class="mt-2 text-xs text-gray-500">What I've learned and what I bring to a project.</p>
+            </div>
+
+            <div class="mt-7 grid gap-3 sm:grid-cols-2">
+                <article class="reveal rounded border border-gray-200 p-4">
+                    <h3 class="text-sm font-bold">💻 AI First Development</h3>
+                    <p class="mt-2 section-description">
+                        Integrating AI-assisted development into practical engineering and problem-solving workflows.
+                    </p>
+                </article>
+
+                <article class="reveal rounded border border-gray-200 p-4">
+                    <h3 class="text-sm font-bold">🧩 Analytical &amp; Business Understanding</h3>
+                    <p class="mt-2 section-description">
+                        Able to translate business requirements into clear technical solutions.
+                    </p>
+                </article>
+
+                <article class="reveal rounded border border-gray-200 p-4">
+                    <h3 class="text-sm font-bold">🤝 Problem Solving &amp; Collaboration</h3>
+                    <p class="mt-2 section-description">
+                        Break complex problems into manageable solutions and work effectively with teams.
+                    </p>
+                </article>
+
+                <article class="reveal rounded border border-gray-200 p-4">
+                    <h3 class="text-sm font-bold">🚀 Application Design &amp; Deployment</h3>
+                    <p class="mt-2 section-description">
+                        Experience designing, deploying and maintaining production-ready applications.
+                    </p>
+                </article>
+            </div>
+        </section>
+
+        <!-- EXPERIENCE -->
+        <section id="experience" class="reveal section-divider py-10 sm:py-12">
+            <div class="text-center">
+                <h2 class="section-title">Work Experience</h2>
+                <div class="mx-auto mt-1 h-1 w-12 rounded bg-blue-600"></div>
+                <p class="mx-auto mt-2 max-w-2xl section-description">
+                    A quick overview of my professional experience, responsibilities and the
+                    kind of work I've handled throughout my career.
+                </p>
+            </div>
+
+            <div class="mx-auto mt-8 max-w-3xl">
+
+                <article class="reveal border-l-2 border-blue-600 pl-5 sm:pl-6">
+                    <h3 class="text-sm font-bold sm:text-base">
+                        Sr. Software Engineer <span class="text-gray-400">|</span> Navomco/Global Services
+                    </h3>
+                    <p class="mt-1 text-xs font-semibold text-blue-600">Dec 2021 – Dec 2024</p>
+
+                    <p class="mt-3 text-sm leading-6 text-gray-600">
+                        Worked on full-stack applications and business-critical systems, helping
+                        transform requirements into reliable software solutions.
+                    </p>
+
+                    <div class="experience-details">
+                        <ul class="mt-3 list-disc space-y-2 pl-5 section-description">
+                            <li>Designed and developed backend services, REST APIs and application features using PHP
+                                and Laravel.
+                            </li>
+                            <li>Built and maintained Angular-based interfaces with a focus on usability, maintainability
+                                and
+                                responsive design.</li>
+                            <li>Worked with relational databases, application integrations and data-driven business
+                                workflows.</li>
+                            <li>Used Docker, Linux and cloud environments to support development and deployment
+                                workflows.</li>
+                            <li>Collaborated with stakeholders and other developers to troubleshoot issues and deliver
+                                production-ready features.</li>
+                            <li>Applied AI-assisted development tools to improve research, coding, debugging and
+                                documentation
+                                workflows.</li>
+                        </ul>
+                    </div>
+
+                    <div class="mt-3 flex justify-end">
+                        <button type="button"
+                            class="experience-toggle inline-flex items-center gap-1 text-xs font-semibold text-blue-600 transition hover:text-blue-800"
+                            aria-expanded="false">
+                            <span class="experience-toggle-label">See More</span>
+                            <svg class="experience-toggle-icon h-4 w-4" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                aria-hidden="true">
+                                <path d="M6 9l6 6 6-6" />
+                            </svg>
+                        </button>
+                    </div>
+                </article>
+
+                <div class="my-6 border-t border-dashed border-gray-200"></div>
+
+                <article class="reveal border-l-2 border-blue-600 pl-5 sm:pl-6">
+                    <h3 class="text-sm font-bold sm:text-base">
+                        Mid Software Engineer <span class="text-gray-400">|</span> Navomco/Global Services
+                    </h3>
+                    <p class="mt-1 text-xs font-semibold text-blue-600">Oct 2020 – Dec 2021</p>
+
+                    <p class="mt-3 text-sm leading-6 text-gray-600">
+                        Developed application features and services while working closely with
+                        the team to improve existing systems and deliver new functionality.
+                    </p>
+
+                    <div class="experience-details">
+                        <ul class="mt-3 list-disc space-y-2 pl-5 section-description">
+                            <li>Implemented new features based on business and technical requirements.</li>
+                            <li>Maintained existing applications and resolved bugs across frontend and backend
+                                components.</li>
+                            <li>Developed APIs and database functionality to support internal and customer-facing
+                                applications.</li>
+                            <li>Participated in code reviews, testing and troubleshooting activities.</li>
+                            <li>Worked with developers and business users to clarify requirements and improve
+                                application workflows.
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="mt-3 flex justify-end">
+                        <button type="button"
+                            class="experience-toggle inline-flex items-center gap-1 text-xs font-semibold text-blue-600 transition hover:text-blue-800"
+                            aria-expanded="false">
+                            <span class="experience-toggle-label">See More</span>
+                            <svg class="experience-toggle-icon h-4 w-4" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                aria-hidden="true">
+                                <path d="M6 9l6 6 6-6" />
+                            </svg>
+                        </button>
+                    </div>
+                </article>
+
+                <div class="my-6 border-t border-dashed border-gray-200"></div>
+
+                <article class="reveal border-l-2 border-blue-600 pl-5 sm:pl-6">
+                    <h3 class="text-sm font-bold sm:text-base">
+                        PHP Web Developer <span class="text-gray-400">|</span> Navomco/Global Services
+                    </h3>
+                    <p class="mt-1 text-xs font-semibold text-blue-600">Sep 2018 – Oct 2020</p>
+
+                    <p class="mt-3 text-sm leading-6 text-gray-600">
+                        Developed websites and web applications while gaining broad experience
+                        in PHP development, databases, frontend technologies and web integrations.
+                    </p>
+
+                    <div class="experience-details">
+                        <ul class="mt-3 list-disc space-y-2 pl-5 section-description">
+                            <li>Developed and maintained PHP-based websites and web applications.</li>
+                            <li>Created backend functionality, database queries and reusable application components.
+                            </li>
+                            <li>Worked with HTML, CSS, JavaScript and jQuery to create interactive web experiences.</li>
+                            <li>Integrated third-party services and APIs into existing applications.</li>
+                            <li>Investigated production issues and implemented fixes while keeping existing
+                                functionality stable.</li>
+                        </ul>
+                    </div>
+
+                    <div class="mt-3 flex justify-end">
+                        <button type="button"
+                            class="experience-toggle inline-flex items-center gap-1 text-xs font-semibold text-blue-600 transition hover:text-blue-800"
+                            aria-expanded="false">
+                            <span class="experience-toggle-label">See More</span>
+                            <svg class="experience-toggle-icon h-4 w-4" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                aria-hidden="true">
+                                <path d="M6 9l6 6 6-6" />
+                            </svg>
+                        </button>
+                    </div>
+                </article>
+
+
+
+            </div>
+        </section>
+
+
+        <!-- CONTACT -->
+        <section id="contact" class="reveal section-divider py-10 sm:py-12">
+            <div class="text-center">
+                <h2 class="section-title">Contact Me</h2>
+                <div class="mx-auto mt-1 h-1 w-12 rounded bg-blue-600"></div>
+                <p class="mx-auto mt-2 max-w-2xl section-description">
+                    Feel free to reach out if you'd like to discuss a project, opportunity or collaboration.
+                </p>
+            </div>
+
+            <div
+                class="mx-auto mt-7 grid max-w-3xl items-center gap-6 rounded-lg border border-gray-200 bg-white p-6 shadow-soft sm:grid-cols-2 sm:p-8">
+                <!-- Contact details -->
+                <div class="text-center sm:text-left">
+                    <p class="text-xs font-semibold uppercase tracking-widest text-gray-400">Get in touch</p>
+
+                    <a href="mailto:your.email@example.com"
+                        class="mt-2 block text-sm font-semibold text-blue-600 transition hover:text-blue-700 sm:text-base">
+                        your.email@example.com
+                    </a>
+
+                    <a href="tel:+1234567890"
+                        class="mt-2 block text-sm text-gray-600 transition hover:text-blue-600 sm:text-base">
+                        +1 234 567 890
+                    </a>
+                </div>
+
+                <!-- Resume -->
+                <div class="flex justify-center sm:justify-end">
+                    <a href="resume.pdf" download
+                        class="inline-flex items-center gap-2 rounded-md bg-blue-600 px-5 py-3 text-sm font-bold text-white shadow-sm transition hover:bg-blue-700 hover:shadow-md">
+                        <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                            <polyline points="7 10 12 15 17 10" />
+                            <line x1="12" y1="15" x2="12" y2="3" />
+                        </svg>
+                        Download Resume
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="reveal border-t border-gray-200 py-8 text-center">
+        <p class="text-[11px] font-bold uppercase tracking-widest text-gray-700">
+            Let's Build · Let's Learn · Let's Innovate
+        </p>
+        <p class="mt-2 text-[11px] text-gray-400">
+            © <span id="year"></span> Jeph Reyes. All rights reserved.
+        </p>
+    </footer>
+
+    <script src="index-assets/index.js"></script>
+</body>
+
+</html>
