@@ -58,7 +58,7 @@ function renderProjects() {
     projects.forEach((project, index) => {
         const isRight = index % 2 === 0;
         const projectHTML = `
-            <article class="project-item px-1">
+            <article class="project-item px-1" style="opacity: 1; transform: translateY(0);">
                 <div class="project-card rounded border border-gray-200 bg-white shadow-soft">
                     <div class="project-thumb" style="background-image: url('${project.thumbNailImg}');"></div>
                     <div class="p-4">
