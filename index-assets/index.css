@@ -61,6 +61,9 @@ body {
 /* Beating / blinking profile border */
 .profile-ring {
     animation: pulseRing 1.7s ease-in-out infinite;
+    background-size: cover;
+    background-position: 0px 2px;
+    border: 5px solid #6366f1;
 }
 
 @keyframes pulseRing {
@@ -68,12 +71,12 @@ body {
     0%,
     100% {
         box-shadow: 0 0 0 0 rgba(37, 99, 235, .08);
-        border-color: #4f46e5;
+        border-color: #6366f1;
     }
 
     50% {
         box-shadow: 0 0 0 8px rgba(37, 99, 235, .12);
-        border-color: #2563eb;
+        border-color: #6366f1;
     }
 }
 
@@ -333,4 +336,8 @@ body {
     .skill-title {
         font-size: 1rem;
     }
+}
+
+.qualification-wrapper span {
+    font-size: 20px;
 }

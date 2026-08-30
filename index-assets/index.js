@@ -19,7 +19,7 @@ const projects = [
         title: 'North Hollywood Toyota',
         thumbNailImg: 'site-images/nht.png',
         description: 'North Hollywood Toyota dealership website, supporting vehicle listings, customer inquiries, and service scheduling.',
-        url: 'https://www.toyotaofhollywood.com/',
+        url: 'https://www.toyotaofhollywood.com/'
     },
     {
         id: 2,
