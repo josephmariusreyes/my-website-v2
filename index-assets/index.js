@@ -58,7 +58,7 @@ function renderProjects() {
     projects.forEach((project, index) => {
         const isRight = index % 2 === 0;
         const projectHTML = `
-            <article class="project-item reveal px-1" style="opacity: 0; transform: translateY(28px);">
+            <article class="project-item px-1">
                 <div class="project-card rounded border border-gray-200 bg-white shadow-soft">
                     <div class="project-thumb" style="background-image: url('${project.thumbNailImg}');"></div>
                     <div class="p-4">
@@ -76,7 +76,8 @@ function renderProjects() {
         $container.append(projectHTML);
     });
 
-    // Re-observe newly added elements
+    // Projects are displayed by default, no animation needed
+    // Re-observe newly added elements for other reveals only
     const observer = new IntersectionObserver(function (entries, obs) {
         entries.forEach(function (entry) {
             if (!entry.isIntersecting) return;
@@ -108,9 +109,7 @@ function renderProjects() {
         rootMargin: "0px 0px -40px 0px"
     });
 
-    $container.find('.project-item').each(function () {
-        observer.observe(this);
-    });
+    // Note: Projects are displayed by default without animation
 }
 
 $(function () {
