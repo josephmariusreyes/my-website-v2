@@ -144,10 +144,14 @@ body {
 }
 
 .project-thumb {
-    height: 150px;
     overflow: hidden;
-    background: linear-gradient(135deg, #e5e7eb, #cbd5e1);
+    background: #f4f6f8;
     position: relative;
+    background-size: contain;
+    background-position: center;
+    height: 200px;
+    width: 100%;
+    background-repeat: no-repeat;
 }
 
 /* Lightweight CSS mockups so the page works with no image assets */
