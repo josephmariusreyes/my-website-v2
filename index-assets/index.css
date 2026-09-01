@@ -128,9 +128,35 @@ body {
     cursor: pointer;
 }
 
+.project-card-link.is-unavailable:hover,
+.project-card-link.is-unavailable:focus-visible {
+    transform: none;
+    box-shadow: 0 10px 22px rgba(15, 23, 42, 0.08);
+    cursor: not-allowed;
+}
+
 .project-card {
     width: 100%;
     transition: transform 0.22s ease, box-shadow 0.22s ease;
+}
+
+.project-unavailable-modal .modal-content {
+    border: 0;
+    border-radius: 1rem;
+    box-shadow: 0 20px 45px rgba(15, 23, 42, 0.12);
+}
+
+.project-unavailable-modal .modal-header,
+.project-unavailable-modal .modal-footer {
+    border-color: transparent;
+}
+
+.text-gray-600 {
+    color: #4b5563;
+}
+
+.text-gray-900 {
+    color: #111827;
 }
 
 .project-item:nth-child(odd) .project-card-link {

@@ -29,9 +29,9 @@ const projects = [
     {
         id: 1,
         title: 'AddToQueue Backend API',
-        thumbNailImg: '',
+        thumbNailImg: 'site-images/addtoqueue-ap-screenshot.png',
         description: 'A personal project of mine, this is a backend API of an online queueing application, this projects demonstrate documenting an API using scribe.',
-        url: 'https://www.toyotaofhollywood.com/',
+        url: '#',
         keyTechUsed: [
             'PHP',
             'Laravel',
@@ -82,9 +82,12 @@ function renderProjects() {
 
     projects.forEach((project) => {
         const techStack = project.keyTechUsed.join(' - ');
+        const isUnavailable = project.url === '#';
+        const targetAttr = isUnavailable ? '' : 'target="_blank" rel="noopener noreferrer"';
+
         const projectHTML = `
             <article class="project-item px-1" style="opacity: 1; transform: translateY(0);">
-                <a href="${project.url}" target="_blank" rel="noopener noreferrer" class="project-card-link" aria-label="Open ${project.title}">
+                <a href="${project.url}" ${targetAttr} class="project-card-link ${isUnavailable ? 'is-unavailable' : ''}" data-unavailable="${isUnavailable}" data-project-title="${project.title}" aria-label="Open ${project.title}">
                     <div class="project-card rounded border border-gray-200 bg-white shadow-soft">
                         <div class="project-thumb" style="background-image: url('${project.thumbNailImg}');"></div>
                         <div class="p-4">
@@ -228,6 +231,17 @@ $(function () {
             $button.attr("aria-expanded", "false").removeClass("is-open");
             $button.find(".experience-toggle-label").text("See More");
         }
+    });
+
+    $('.projects-list-container').on('click', '.project-card-link[data-unavailable="true"]', function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+
+        const projectTitle = $(this).data('projectTitle') || 'This project';
+        $('#projectUnavailableTitle').text(projectTitle + ' is temporarily unavailable');
+
+        const modal = new bootstrap.Modal(document.getElementById('projectUnavailableModal'));
+        modal.show();
     });
 
     $('a[href^="#"]').on("click", function (e) {
