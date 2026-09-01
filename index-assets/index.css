@@ -113,16 +113,51 @@ body {
     z-index: 2;
 }
 
-.project-card {
+.project-card-link {
+    display: block;
     width: calc(50% - 42px);
+    color: inherit;
+    text-decoration: none;
+    transition: transform 0.22s ease, box-shadow 0.22s ease;
 }
 
-.project-item:nth-child(odd) .project-card {
+.project-card-link:hover,
+.project-card-link:focus-visible {
+    transform: scale(1.03);
+    box-shadow: 0 16px 30px rgba(37, 99, 235, 0.12);
+    cursor: pointer;
+}
+
+.project-card {
+    width: 100%;
+    transition: transform 0.22s ease, box-shadow 0.22s ease;
+}
+
+.project-item:nth-child(odd) .project-card-link {
     margin-left: auto;
 }
 
-.project-item:nth-child(even) .project-card {
+.project-item:nth-child(even) .project-card-link {
     margin-right: auto;
+}
+
+.project-tech-divider {
+    width: 100%;
+    height: 2px;
+    margin-top: 0.8rem;
+    border-radius: 999px;
+    background: linear-gradient(90deg, #2563eb 0%, #60a5fa 100%);
+}
+
+.project-tech-stack {
+    font-size: 0.8rem;
+    line-height: 1.5rem;
+    color: #1f2937;
+    font-weight: 600;
+}
+
+.project-tech-stack strong {
+    color: #2563eb
 }
 
 .experience-details {

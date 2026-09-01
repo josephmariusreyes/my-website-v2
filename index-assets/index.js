@@ -15,32 +15,28 @@ tailwind.config = {
 
 const projects = [
     {
-        id: 1,
-        title: 'North Hollywood Toyota',
-        thumbNailImg: 'site-images/nht.png',
-        description: 'North Hollywood Toyota dealership website, supporting vehicle listings, customer inquiries, and service scheduling.',
-        url: 'https://www.toyotaofhollywood.com/'
-    },
-    {
-        id: 2,
-        title: 'Dealer Center',
-        thumbNailImg: 'site-images/dc-dashboard.png',
-        description: 'Dealership management platform used by automotive dealers to manage inventory, sales, financing, and customer records.',
-        url: 'https://www.dealercenter.com/crm/#crm-dashboard',
-    },
-    {
-        id: 3,
-        title: 'Dealer Website',
-        thumbNailImg: 'site-images/dws.png',
-        description: 'Is a platform that provides automotive dealerships with customizable websites designed to showcase vehicle inventory and capture customer leads.',
-        url: 'https://www.dealercenter.com/dealer-websites/#dw-premium-pro',
-    },
-    {
         id: 4,
         title: 'Auction Center',
         thumbNailImg: 'site-images/auction-center.png',
         description: 'Is a platform within DealerCenter that allows automotive dealers to browse and purchase vehicles from multiple auction sources in one place',
         url: 'https://www.dealercenter.com/inventory-management/#im-auction-center',
+        keyTechUsed: [
+            'Angular',
+            'C#',
+            'ASP.NET'
+        ],
+    },
+    {
+        id: 1,
+        title: 'AddToQueue Backend API',
+        thumbNailImg: '',
+        description: 'A personal project of mine, this is a backend API of an online queueing application, this projects demonstrate documenting an API using scribe.',
+        url: 'https://www.toyotaofhollywood.com/',
+        keyTechUsed: [
+            'PHP',
+            'Laravel',
+            'Laravel Scribe'
+        ],
     },
     {
         id: 5,
@@ -48,6 +44,35 @@ const projects = [
         thumbNailImg: 'site-images/mobile-dc-chat-resize.png',
         description: 'Is a messaging and communication tool built for automotive dealerships to interact with customers directly through their websites. It enables real-time conversations.',
         url: 'https://www.dealercenter.com/inventory-management/#im-auction-center',
+        keyTechUsed: [
+            'Angular',
+            'C#',
+            'ASP.NET'
+        ],
+    },
+    {
+        id: 2,
+        title: 'North Hollywood Toyota',
+        thumbNailImg: 'site-images/nht.png',
+        description: 'North Hollywood Toyota dealership website, supporting vehicle listings, customer inquiries, and service scheduling.',
+        url: 'https://www.toyotaofhollywood.com/',
+        keyTechUsed: [
+            'PHP',
+            'Wordpress',
+            'JQuery'
+        ],
+    },
+    {
+        id: 3,
+        title: 'Dealer Website',
+        thumbNailImg: 'site-images/dws.png',
+        description: 'Is a platform that provides automotive dealerships with customizable websites designed to showcase vehicle inventory and capture customer leads.',
+        url: 'https://www.dealercenter.com/dealer-websites/#dw-premium-pro',
+        keyTechUsed: [
+            'PHP',
+            'Wordpress',
+            'JQuery'
+        ],
     },
 ];
 
@@ -55,22 +80,25 @@ function renderProjects() {
     const $container = $('.projects-list-container');
     $container.empty();
 
-    projects.forEach((project, index) => {
-        const isRight = index % 2 === 0;
+    projects.forEach((project) => {
+        const techStack = project.keyTechUsed.join(' - ');
         const projectHTML = `
             <article class="project-item px-1" style="opacity: 1; transform: translateY(0);">
-                <div class="project-card rounded border border-gray-200 bg-white shadow-soft">
-                    <div class="project-thumb" style="background-image: url('${project.thumbNailImg}');"></div>
-                    <div class="p-4">
-                        <h3 class="text-sm font-bold">${project.title}</h3>
-                        <p class="mt-2 section-description">
-                            ${project.description}
-                        </p>
-                        <a href="${project.url}" target="_blank" rel="noopener noreferrer" class="mt-3 inline-flex text-sm font-semibold text-blue-600 hover:text-blue-700">
-                            View Project →
-                        </a>
+                <a href="${project.url}" target="_blank" rel="noopener noreferrer" class="project-card-link" aria-label="Open ${project.title}">
+                    <div class="project-card rounded border border-gray-200 bg-white shadow-soft">
+                        <div class="project-thumb" style="background-image: url('${project.thumbNailImg}');"></div>
+                        <div class="p-4">
+                            <h3 class="text-sm font-bold">${project.title}</h3>
+                            <p class="mt-2 section-description">
+                                ${project.description}
+                            </p>
+                            <div class="project-tech-divider"></div>
+                            <p class="project-tech-stack mt-3">
+                                <strong>Tech Stack:</strong> ${techStack}
+                            </p>
+                        </div>
                     </div>
-                </div>
+                </a>
             </article>
         `;
         $container.append(projectHTML);
