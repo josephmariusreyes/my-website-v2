@@ -14,18 +14,18 @@ tailwind.config = {
 };
 
 const projects = [
-    // {
-    //     id: 4,
-    //     title: 'Auction Center',
-    //     thumbNailImg: 'site-images/auction-center.png',
-    //     description: 'Is a platform within DealerCenter that allows automotive dealers to browse and purchase vehicles from multiple auction sources in one place',
-    //     url: 'https://www.dealercenter.com/inventory-management/#im-auction-center',
-    //     keyTechUsed: [
-    //         'Angular',
-    //         'C#',
-    //         'ASP.NET'
-    //     ],
-    // },
+    {
+        id: 4,
+        title: 'Auction Center',
+        thumbNailImg: 'site-images/auction-center.png',
+        description: 'Is a platform within DealerCenter that allows automotive dealers to browse and purchase vehicles from multiple auction sources in one place',
+        url: 'https://www.dealercenter.com/inventory-management/#im-auction-center',
+        keyTechUsed: [
+            'Angular',
+            'C#',
+            'ASP.NET'
+        ],
+    },
     {
         id: 1,
         title: 'AddToQueue Backend API',
@@ -43,7 +43,7 @@ const projects = [
         title: 'DC Chat',
         thumbNailImg: 'site-images/mobile-dc-chat-resize.png',
         description: 'Is a messaging and communication tool built for automotive dealerships to interact with customers directly through their websites. It enables real-time conversations.',
-        url: 'https://www.dealercenter.com/inventory-management/#im-auction-center',
+        url: 'https://www.dealercenter.com/inventory-management/#dc-chat',
         keyTechUsed: [
             'Angular',
             'C#',
