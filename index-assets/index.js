@@ -27,18 +27,6 @@ const projects = [
         ],
     },
     {
-        id: 1,
-        title: 'AddToQueue Backend API',
-        thumbNailImg: 'site-images/addtoqueue-ap-screenshot.png',
-        description: 'A personal project of mine, this is a backend API of an online queueing application, this projects demonstrate documenting an API using scribe.',
-        url: '#',
-        keyTechUsed: [
-            'PHP',
-            'Laravel',
-            'Laravel Scribe'
-        ],
-    },
-    {
         id: 5,
         title: 'DC Chat',
         thumbNailImg: 'site-images/mobile-dc-chat-resize.png',
@@ -48,6 +36,18 @@ const projects = [
             'Angular',
             'C#',
             'ASP.NET'
+        ],
+    },
+    {
+        id: 1,
+        title: 'AddToQueue Backend API',
+        thumbNailImg: 'site-images/addtoqueue-ap-screenshot.png',
+        description: 'A personal project of mine, this is a backend API of an online queueing application, this projects demonstrate documenting an API using scribe.',
+        url: '#',
+        keyTechUsed: [
+            'PHP',
+            'Laravel',
+            'Laravel Scribe'
         ],
     },
     {
