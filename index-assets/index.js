@@ -95,10 +95,6 @@ function renderProjects() {
                             <p class="mt-2 section-description">
                                 ${project.description}
                             </p>
-                            <div class="project-tech-divider"></div>
-                            <p class="project-tech-stack mt-3">
-                                <strong>Tech Stack:</strong> ${techStack}
-                            </p>
                         </div>
                     </div>
                 </a>
@@ -107,6 +103,10 @@ function renderProjects() {
         $container.append(projectHTML);
     });
 
+    // <div class="project-tech-divider"></div>
+    // <p class="project-tech-stack mt-3">
+    //     <strong>Tech Stack:</strong> ${techStack}
+    // </p>
     // Projects are displayed by default, no animation needed
     // Re-observe newly added elements for other reveals only
     const observer = new IntersectionObserver(function (entries, obs) {
