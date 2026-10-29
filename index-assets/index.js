@@ -38,18 +38,18 @@ const projects = [
             'ASP.NET'
         ],
     },
-    {
-        id: 1,
-        title: 'AddToQueue Backend API',
-        thumbNailImg: 'site-images/addtoqueue-ap-screenshot.png',
-        description: 'A personal project of mine, this is a backend API of an online queueing application, this projects demonstrate documenting an API using scribe.',
-        url: '#',
-        keyTechUsed: [
-            'PHP',
-            'Laravel',
-            'Laravel Scribe'
-        ],
-    },
+    // {
+    //     id: 1,
+    //     title: 'AddToQueue Backend API',
+    //     thumbNailImg: 'site-images/addtoqueue-ap-screenshot.png',
+    //     description: 'A personal project of mine, this is a backend API of an online queueing application, this projects demonstrate documenting an API using scribe.',
+    //     url: '#',
+    //     keyTechUsed: [
+    //         'PHP',
+    //         'Laravel',
+    //         'Laravel Scribe'
+    //     ],
+    // },
     {
         id: 2,
         title: 'North Hollywood Toyota',
